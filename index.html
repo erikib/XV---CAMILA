@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Mis XV Camila | 18 de Julio 2026</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Fotos/pastel-de-cumpleanos.png">
+    <link rel="shortcut icon" href="Fotos/pastel-de-cumpleanos.png">
+    <link rel="apple-touch-icon" href="Fotos/pastel-de-cumpleanos.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="mariposas-globales" aria-hidden="true">
+        <span class="mariposa-cristal mc1">🦋</span>
+        <span class="mariposa-cristal mc2">🦋</span>
+        <span class="mariposa-cristal mc3">🦋</span>
+        <span class="mariposa-cristal mc4">🦋</span>
+        <span class="mariposa-cristal mc5">🦋</span>
+        <span class="mariposa-cristal mc6">🦋</span>
+        <span class="destello-cristal dc1">✦</span>
+        <span class="destello-cristal dc2">✧</span>
+        <span class="destello-cristal dc3">✦</span>
+        <span class="destello-cristal dc4">✧</span>
+        <span class="destello-cristal dc5">✦</span>
+        <span class="destello-cristal dc6">✧</span>
+    </div>
+
+    <div class="cargando" id="pantallaCarga">
+        <div class="cargando-efectos" aria-hidden="true">
+            <span class="mariposa m1">🦋</span>
+            <span class="mariposa m2">🦋</span>
+            <span class="mariposa m3">🦋</span>
+            <span class="mariposa m4">🦋</span>
+            <span class="brillo b1">✦</span>
+            <span class="brillo b2">✧</span>
+            <span class="brillo b3">✦</span>
+            <span class="brillo b4">✧</span>
+            <span class="brillo b5">✦</span>
+                </div>
+        <div class="carta-invitacion" id="cartaInvitacion">
+            <div class="carta-marco"></div>
+            <div class="sobre-tapa"></div>
+            <div class="cordon-vertical" aria-hidden="true"></div>
+            <div class="cordon-horizontal" aria-hidden="true"></div>
+            <div class="nudo-cordon" aria-hidden="true"></div>
+            <div class="foto-carta" aria-hidden="true">
+                <img src="Fotos/DSC03973.jpg" alt="Foto de la quinceanera">
+                <span>Camila XV</span>
+            </div>
+            <div class="carta-mariposas" aria-hidden="true">
+                <span class="mini-mariposa mm1">??</span>
+                <span class="mini-mariposa mm2">??</span>
+                <span class="mini-mariposa mm3">??</span>
+            </div>
+            <p class="carta-titulo">Tienes una invitacion</p>
+            <p class="carta-subtitulo">Presiona el liston para abrir</p>
+            <button type="button" id="btnAbrirInvitacion" class="liston-btn" aria-label="Abrir invitacion">
+                <span class="liston-lazo"></span>
+                <span class="liston-texto">Abrir</span>
+            </button>
+        </div>
+        <div class="cargando-contenido">
+            <div class="cargando-flor">❀</div>
+            <p>Preparando la celebración...</p>
+        </div>
+    </div>
+
+    <header id="inicio">
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="florales-bg">
+                <div class="flor flor-1">❀</div>
+                <div class="flor flor-2">✿</div>
+                <div class="flor flor-3">🌸</div>
+                <div class="flor flor-4">🌼</div>
+                <div class="flor flor-5">🌷</div>
+                <div class="flor flor-6">✨</div>
+            </div>
+            <div class="hero-content">
+                <span class="flor-decorativa">❁</span>
+                <div class="etiqueta-invitacion">Tienes una invitación</div>
+                <h1 class="nombre-quince">
+                    <span class="linea-1">Mis XV</span>
+                    <span class="linea-2">Camila</span>
+                </h1>
+                <p class="tagline">Un sueño que se convierte en realidad</p>
+                <div class="decorative-line"></div>
+                <div class="fecha-hero">
+                    <span>18</span>
+                    <span class="separador">·</span>
+                    <span>Julio</span>
+                    <span class="separador">·</span>
+                    <span>2026</span>
+                </div>
+                <div class="hora-hero">3:00 PM</div>
+                <a href="#informacion" class="btn-scroll">
+                    <span>Descubrir la celebración</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">❁</span>
+                    Camila<span>XV</span>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#informacion">Celebración</a></li>
+                    <li><a href="#lugares">Lugares</a></li>
+                    <li><a href="#padrinos">Agradecimientos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#regalos">Regalos</a></li>
+                    <li><a href="#confirmacion">Asistencia</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contador-section">
+            <div class="container">
+                <div class="flor-titulo">✿</div>
+                <h2 class="section-title fade-up">El momento se acerca</h2>
+                <p class="subtitulo cursiva fade-up delay-1">Cada segundo nos acerca más a este día especial</p>
+                <div class="countdown-wrapper fade-up delay-1">
+                    <div class="countdown-container">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="dias">00</div>
+                            <div class="countdown-label">Días</div>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="horas">00</div>
+                            <div class="countdown-label">Horas</div>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutos">00</div>
+                            <div class="countdown-label">Minutos</div>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="segundos">00</div>
+                            <div class="countdown-label">Segundos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown-mensaje fade-up delay-2">
+                    <span>✨</span> Para celebrar juntos este día tan especial <span>✨</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="informacion" class="info-section">
+            <div class="container">
+                <div class="flor-titulo">✾</div>
+                <h2 class="section-title fade-up">La Celebración</h2>
+                <p class="subtitulo cursiva fade-up delay-1">Te invitamos a ser parte de este día inolvidable</p>
+                <div class="info-grid">
+                    <div class="info-card fade-up delay-1">
+                        <div class="card-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3>Ceremonia Religiosa</h3>
+                        <p>Parroquia de San Juan Bautista</p>
+                        <p class="hora">3:00 PM</p>
+                        <button class="btn-mapa" data-lugar="iglesia">
+                            <i class="fas fa-map-marker-alt"></i> Ver en Maps
+                        </button>
+                    </div>
+                    <div class="info-card fade-up delay-2">
+                        <div class="card-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <h3>Recepción</h3>
+                        <p>Salón Real del Café, Lagunillas</p>
+                        <p class="hora">5:00 PM</p>
+                        <button class="btn-mapa" data-lugar="salon">
+                            <i class="fas fa-map-marker-alt"></i> Ver en Maps
+                        </button>
+                    </div>
+                    <div class="info-card fade-up delay-3">
+                        <div class="card-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Vals</h3>
+                        <p>Apertura del baile</p>
+                        <p class="hora">7:00 PM</p>
+                        <div class="vals-nota">✨ Momento especial ✨</div>
+                    </div>
+                </div>
+                <div class="vestido-nota fade-up delay-3">
+                    <i class="fas fa-palette"></i>
+                    <p><strong>Código de vestimenta:</strong> Formal elegante</p>
+                    <p class="color-nota"><span class="azul-bebe"></span> Color reservado: <strong>Azul Bebé (#88D2EF)</strong> para la quinceañera</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lugares" class="lugares-section">
+            <div class="container">
+                <div class="flor-titulo">❁</div>
+                <h2 class="section-title fade-up">Ubicaciones</h2>
+                <p class="subtitulo cursiva fade-up delay-1">Los lugares que albergarán nuestra celebración</p>
+                <div class="lugares-grid">
+                    <div class="lugar-card fade-up delay-1">
+                        <div class="lugar-icono">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3>Parroquia de San Juan Bautista</h3>
+                        <p>Lagunillas, Venezuela</p>
+                        <div class="mini-mapa">
+                            <iframe
+                                title="Mapa misa"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps?q=20.275611,-97.958417&z=16&output=embed">
+                            </iframe>
+                        </div>
+                        <button class="btn-mapa-principal" data-lugar="iglesia">
+                            <i class="fas fa-route"></i> Como llegar
+                        </button>
+                    </div>
+                    <div class="lugar-card fade-up delay-2">
+                        <div class="lugar-icono">
+                            <i class="fas fa-ballroom-dance"></i>
+                        </div>
+                        <h3>Salón Real del Café</h3>
+                        <p>Lagunillas, Venezuela</p>
+                        <div class="mini-mapa">
+                            <iframe
+                                title="Mapa recepcion"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps?q=20.226583,-97.950444&z=16&output=embed">
+                            </iframe>
+                        </div>
+                        <button class="btn-mapa-principal" data-lugar="salon">
+                            <i class="fas fa-route"></i> Como llegar
+                        </button>
+                    </div>
+                </div>
+                <div class="nota-transporte fade-up delay-3">
+                    <i class="fas fa-car"></i>
+                    <p>Estacionamiento disponible en ambos lugares</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="padrinos" class="padrinos-section">
+            <div class="container">
+                <div class="flor-titulo">❁</div>
+                <h2 class="section-title fade-up">Agradecimiento Especial</h2>
+                <p class="subtitulo cursiva fade-up delay-1">A quienes hacen posible este sueño</p>
+                <div class="padrinos-grid">
+                    <div class="padrino-card fade-up delay-1">
+                        <div class="padrino-icon">✨</div>
+                        <h3>Padrinos</h3>
+                        <p class="nombre">Ashley Morales Salas</p>
+                        <p class="nombre">Gaddiel De Vega</p>
+                        <div class="flor-decoration">✧</div>
+                    </div>
+                    <div class="padrino-card fade-up delay-2">
+                        <div class="padrino-icon">🌹</div>
+                        <h3>Padres</h3>
+                        <p class="nombre">Juan Carlos García</p>
+                        <p class="nombre">Adhara Suárez</p>
+                        <div class="flor-decoration">✧</div>
+                    </div>
+                </div>
+                <div class="frase-agradecimiento fade-up delay-3 cursiva">
+                    "Gracias por su amor y apoyo incondicional"
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="galeria-section">
+            <div class="container">
+                <div class="flor-titulo">✿</div>
+                <h2 class="section-title fade-up">Galería de Recuerdos</h2>
+                <p class="subtitulo cursiva fade-up delay-1">Momentos que atesoramos por siempre</p>
+                <div class="galeria-grid" id="galeriaGrid"></div>
+            </div>
+        </section>
+
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+            <div class="modal-caption"></div>
+        </div>
+
+        <section id="regalos" class="regalos-section">
+            <div class="container">
+                <div class="flor-titulo">✾</div>
+                <h2 class="section-title fade-up">Sugerencia de Regalos</h2>
+                <div class="regalos-content fade-up delay-1">
+                    <div class="sobre-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <div class="corazones">
+                            <span>❤️</span>
+                            <span>💙</span>
+                            <span>💜</span>
+                        </div>
+                    </div>
+                    <h3 class="cursiva">Lluvia de Sobres</h3>
+                    <p>Tu presencia es el mejor regalo, pero si deseas contribuir,<br>agradecemos de corazón tu sobre.</p>
+                    <div class="decoracion-azul"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="confirmacion" class="confirmacion-section">
+            <div class="container">
+                <div class="flor-titulo">❁</div>
+                <h2 class="section-title fade-up">Confirma tu Asistencia</h2>
+                <p class="confirmacion-text cursiva fade-up delay-1">Queremos contar contigo en este día tan especial</p>
+                <a href="#" id="btnConfirmarAsistencia" class="btn-confirmar fade-up delay-2">
+                    <span>Confirmar Asistencia</span>
+                    <i class="fas fa-check"></i>
+                </a>
+                <div class="fecha-recordatorio fade-up delay-3">
+                    <i class="fas fa-calendar-check"></i>
+                    <p>Confirma antes del <strong>18 de Julio, 2026</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-flores">
+                <span>✿</span>
+                <span>❀</span>
+                <span>✾</span>
+                <span>❁</span>
+                <span>✿</span>
+            </div>
+            <p class="cursiva">&copy; 2026 - Mis XV Camila | Un día para recordar</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="music-control" id="musicControl">
+        <i class="fas fa-music"></i>
+        <div class="music-wave">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    <audio id="audioPlayer" loop autoplay playsinline preload="auto">
+        <source src="audio/Until I Found You (Em Beihold Version).mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
