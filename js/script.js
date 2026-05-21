@@ -30,8 +30,8 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Apertura de carta inicial
-window.addEventListener('load', () => {
+// Apertura inicial
+document.addEventListener('DOMContentLoaded', () => {
     const cargando = document.getElementById('pantallaCarga');
     const audioInicio = document.getElementById('audioPlayer');
     let yaAbrio = false;
@@ -68,8 +68,13 @@ window.addEventListener('load', () => {
         }, 820);
     };
 
-    // Apertura automática al iniciar.
-    setTimeout(abrirInvitacion, 500);
+    // Apertura automática al iniciar (sin esperar a que carguen todos los recursos pesados).
+    setTimeout(abrirInvitacion, 450);
+
+    // Respaldo: si por cualquier razón no abrió, se fuerza la salida del loader.
+    setTimeout(() => {
+        if (!yaAbrio) abrirInvitacion();
+    }, 2200);
 });
 
 // Menú navbar que aparece al hacer scroll
