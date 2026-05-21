@@ -133,7 +133,7 @@ function cargarGaleria() {
         divWrapper.style.animationDelay = `${index * 0.08}s`;
         
         const imgElement = document.createElement('img');
-        imgElement.src = `fotos/${encodeURIComponent(imgName)}`;
+        imgElement.src = `Fotos/${encodeURIComponent(imgName)}`;
         imgElement.alt = "Foto Recuerdo - Mis XV Camila";
         imgElement.loading = "lazy";
         
