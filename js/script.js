@@ -35,12 +35,16 @@ window.addEventListener('load', () => {
     const cargando = document.getElementById('pantallaCarga');
     const btnAbrir = document.getElementById('btnAbrirInvitacion');
     const audioInicio = document.getElementById('audioPlayer');
+    const esMovil = window.matchMedia('(max-width: 768px)').matches;
+    let yaAbrio = false;
 
     if (!cargando || !btnAbrir) return;
 
     document.body.style.overflow = 'hidden';
 
-    btnAbrir.addEventListener('click', () => {
+    const abrirInvitacion = () => {
+        if (yaAbrio) return;
+        yaAbrio = true;
         cargando.classList.add('abriendo');
 
         if (audioInicio) {
@@ -55,7 +59,14 @@ window.addEventListener('load', () => {
                 document.body.style.overflow = 'auto';
             }, 550);
         }, 820);
-    }, { once: true });
+    };
+
+    btnAbrir.addEventListener('click', abrirInvitacion, { once: true });
+
+    // Respaldo para móviles lentos: evita que se quede atorada la carga.
+    if (esMovil) {
+        setTimeout(abrirInvitacion, 4200);
+    }
 });
 
 // Menú navbar que aparece al hacer scroll
