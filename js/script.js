@@ -33,12 +33,10 @@ updateCountdown();
 // Apertura de carta inicial
 window.addEventListener('load', () => {
     const cargando = document.getElementById('pantallaCarga');
-    const btnAbrir = document.getElementById('btnAbrirInvitacion');
     const audioInicio = document.getElementById('audioPlayer');
-    const esMovil = window.matchMedia('(max-width: 768px)').matches;
     let yaAbrio = false;
 
-    if (!cargando || !btnAbrir) return;
+    if (!cargando) return;
 
     document.body.style.overflow = 'hidden';
 
@@ -49,7 +47,16 @@ window.addEventListener('load', () => {
 
         if (audioInicio) {
             audioInicio.volume = 0.35;
-            audioInicio.play().catch(() => {});
+            audioInicio.play().catch(() => {
+                // Respaldo: algunos móviles bloquean autoplay con sonido.
+                const activarAudio = () => {
+                    audioInicio.play().catch(() => {});
+                    document.removeEventListener('touchstart', activarAudio);
+                    document.removeEventListener('click', activarAudio);
+                };
+                document.addEventListener('touchstart', activarAudio, { once: true });
+                document.addEventListener('click', activarAudio, { once: true });
+            });
         }
 
         setTimeout(() => {
@@ -61,12 +68,8 @@ window.addEventListener('load', () => {
         }, 820);
     };
 
-    btnAbrir.addEventListener('click', abrirInvitacion, { once: true });
-
-    // Respaldo para móviles lentos: evita que se quede atorada la carga.
-    if (esMovil) {
-        setTimeout(abrirInvitacion, 4200);
-    }
+    // Apertura automática al iniciar.
+    setTimeout(abrirInvitacion, 500);
 });
 
 // Menú navbar que aparece al hacer scroll

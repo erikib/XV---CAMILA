@@ -96,6 +96,137 @@ h1, h2, h3, h4, .countdown-number {
     display: none;
 }
 
+.carta-invitacion,
+.cargando-efectos {
+    display: none !important;
+}
+
+.puerta-loader {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+}
+
+.puerta-marco {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    border: none;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.02) 36%, rgba(255, 255, 255, 0) 52%),
+        linear-gradient(180deg, #4aa5d6 0%, #2d7fb0 45%, #1f5f89 100%);
+}
+
+.puerta-hoja {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.02) 18%, rgba(255,255,255,0) 36%),
+        linear-gradient(180deg, #67b8e1 0%, #3f93c3 52%, #2f79a6 100%);
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-style: preserve-3d;
+}
+
+.puerta-izq {
+    left: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    transform-origin: left center;
+}
+
+.puerta-der {
+    right: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    transform-origin: right center;
+}
+
+.puerta-hoja::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+}
+
+.puerta-hoja::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.03) 0 2px,
+        rgba(255, 255, 255, 0) 2px 18px
+    );
+}
+
+.destello-puerta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%) scale(0.6);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,1), rgba(210,241,255,0.88), rgba(255,255,255,0));
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-abrir-puerta {
+    padding: 16px 26px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(10, 12, 20, 0.62);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid rgba(194, 236, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
+    min-width: 170px;
+}
+
+.btn-abrir-puerta {
+    display: none !important;
+}
+
+.btn-abrir-puerta strong {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+
+.btn-abrir-puerta span {
+    font-size: 0.78rem;
+    opacity: 0.82;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.cargando.abriendo .puerta-izq { transform: rotateY(-95deg); }
+.cargando.abriendo .puerta-der { transform: rotateY(95deg); }
+.cargando.abriendo .destello-puerta {
+    opacity: 1;
+    animation: flashPuerta 0.75s ease forwards;
+}
+
+@keyframes flashPuerta {
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0.1; }
+    45% { transform: translate(-50%, -50%) scale(6); opacity: 0.95; }
+    100% { transform: translate(-50%, -50%) scale(10); opacity: 0; }
+}
+
 .carta-invitacion {
     width: min(92vw, 520px);
     min-height: 250px;
