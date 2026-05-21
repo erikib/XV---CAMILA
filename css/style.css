@@ -892,12 +892,15 @@ h1, h2, h3, h4, .countdown-number {
     padding: 20px;
     background: rgba(136, 210, 239, 0.1);
     border-radius: 60px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 12px;
-    left: 50%;
-    position: relative;
-    transform: translateX(-50%);
+    width: min(100%, 760px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nota-transporte i {
@@ -1609,6 +1612,19 @@ footer p.cursiva {
 
     .mini-mapa {
         height: 165px;
+    }
+
+    .nota-transporte {
+        border-radius: 24px;
+        padding: 14px 16px;
+        width: 100%;
+    }
+
+    .nota-transporte p {
+        width: 100%;
+        text-align: center;
+        font-size: 0.95rem;
+        line-height: 1.35;
     }
 }
 
